@@ -249,7 +249,8 @@ button {
 .eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.9rem;
+  margin-bottom: 1.5rem;
   padding: 0.5rem 0.8rem;
   border-radius: var(--radius-full);
   background: color-mix(in srgb, var(--color-primary) 10%, var(--color-surface));
@@ -618,4 +619,10 @@ select:focus {
   border-radius: 1.2rem;
   box-shadow: var(--shadow-md);
   max-width: 100%;
+}
+
+.shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.5rem;  /* add this if missing or too small */
 }
