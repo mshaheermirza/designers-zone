@@ -35,7 +35,7 @@
   const form = document.querySelector("#contact-form");
   if (!form) return;
 
-  const endpoint = "http://localhost:4000/api/contact";
+  const endpoint = "https://dz-backend-9m7h.onrender.com/api/contact";
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
