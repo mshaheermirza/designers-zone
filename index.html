@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Designers Zone — Printing & Trading</title>
+  <link rel="stylesheet" href="style/styles.css" />
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo-wrap" href="index.html" aria-label="Designers Zone logo">
+        <div class="logo-mark">
+          <span class="logo-d">D</span>
+        </div>
+        <div class="logo-text">
+          <strong>Designers Zone</strong>
+          <span>Printing & Trading from Lahore</span>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="printing.html">Printing</a>
+        <a href="trading.html">Trading</a>
+        <a href="#clients">Clients</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-btn" type="button" data-theme-toggle aria-label="Switch theme">◐</button>
+        <a class="primary-btn" href="#contact">Get a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Lahore-based • Serving international clients</span>
+          <h1>Printing precision and trading solutions under one roof.</h1>
+          <p>
+            Designers Zone offers commercial printing, branded packaging, expo stall making,
+            advertising media, and garment accessories for businesses that need quality and
+            dependable delivery.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="printing.html">Explore printing</a>
+            <a class="ghost-btn" href="trading.html">Explore trading</a>
+          </div>
+          <div class="hero-meta">
+            <div class="stat-chip">Offset printing</div>
+            <div class="stat-chip">Product packaging</div>
+            <div class="stat-chip">Garment accessories</div>
+            <div class="stat-chip">Expo stall making</div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="visual-stack">
+            <img src="images/dz_hero_printing.png" alt="Modern offset printing press and packaging sheets in a production hall"/>
+            <div class="panel">
+              <div class="kicker">Printing division</div>
+              <h2>Brand material built for shelves, events, and campaigns.</h2>
+              <p>
+                Offset printing, paper printing, packaging, expo stalls, flexes, billboards,
+                and custom merchandise.
+              </p>
+            </div>
+            <div class="panel">
+              <div class="kicker">Trading division</div>
+              <h2>Garment accessories that complete retail presentation.</h2>
+              <p>
+                Tags, care labels, woven labels, satin labels, stickers, polybags, stand-up
+                pouches, and zipper bags.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="clients" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Trusted by</div>
+            <h2>Selected clients</h2>
+          </div>
+          <p>
+            Designers Zone serves food, pharmaceutical, textile, industrial,
+            and consumer brands across Pakistan and abroad.
+          </p>
+        </div>
+        <div class="clients-wrap">
+          <div class="client-grid">
+            <div class="client">McDonald's</div>
+            <div class="client">Smash Lahore</div>
+            <div class="client">MediPak</div>
+            <div class="client">CCL Pharma</div>
+            <div class="client">Fresenius Medical</div>
+            <div class="client">Sadaqat Textile</div>
+            <div class="client">Ammar Textile</div>
+            <div class="client">Hadi Textile</div>
+            <div class="client">Sergio Tacchini</div>
+            <div class="client">Kappa</div>
+            <div class="client">Umbro</div>
+            <div class="client">Berger Paints</div>
+            <div class="client">Dawn</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-grid">
+        <div>
+          <div class="kicker">Contact</div>
+          <h2>Let’s build your next print or trading order.</h2>
+          <p>
+            Based in Lahore and working with domestic and international clients,
+            Designers Zone supports brands that need dependable production and
+            supply solutions.
+          </p>
+          <div class="info-list">
+            <div class="info-item"><strong>Business name</strong><br>Designers Zone</div>
+            <div class="info-item"><strong>Address</strong><br>143 B, BOR Society, Lahore</div>
+            <div class="info-item"><strong>Coverage</strong><br>Lahore-based with many international clients</div>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <h3>Quick inquiry</h3>
+          <p>Use this form structure when you wire it to your backend or email service.</p>
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Your name" required />
+            </div>
+            <div class="field">
+              <label for="company">Company</label>
+              <input id="company" type="text" placeholder="Company / Brand" />
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="you@example.com" required />
+            </div>
+            <div class="field">
+              <label for="service">Service</label>
+              <select id="service">
+                <option>Printing</option>
+                <option>Trading</option>
+                <option>Both</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="message">Project details</label>
+            <textarea id="message" rows="4"
+              placeholder="Quantities, sizes, timelines, and any reference brands."></textarea>
+          </div>
+          <button class="primary-btn" type="submit">Send inquiry</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>Designers Zone — Printing & Trading</span>
+      <span>Lahore, Pakistan</span>
+    </div>
+  </footer>
+</body>
+</html>
