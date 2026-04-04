@@ -47,7 +47,6 @@
       name: form.querySelector("#name")?.value || "",
       company: form.querySelector("#company")?.value || "",
       email: form.querySelector("#email")?.value || "",
-      service: form.querySelector("#service")?.value || "",
       message: form.querySelector("#message")?.value || "",
     };
 
