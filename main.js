@@ -50,6 +50,23 @@
       message: form.querySelector("#message")?.value || "",
     };
 
+    const form = document.getElementById("contact-form");
+    const details = document.getElementById("details");
+
+    if (form && details) {
+      details.addEventListener("invalid", (event) => {
+        if (details.validity.valueMissing) {
+          details.setCustomValidity("Please add a message before submitting.");
+        } else {
+          details.setCustomValidity("");
+        }
+      });
+
+      details.addEventListener("input", () => {
+        details.setCustomValidity("");
+      });
+    }
+
     try {
       const res = await fetch(endpoint, {
         method: "POST",
