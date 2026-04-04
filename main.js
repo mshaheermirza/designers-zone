@@ -1,3 +1,4 @@
+// Theme toggle
 (function () {
   const btn = document.querySelector("[data-theme-toggle]");
   if (!btn) return;
@@ -30,12 +31,29 @@
   });
 })();
 
-// Simple demo handler for the static contact form
+
+// Contact form handler
 (function () {
   const form = document.querySelector("#contact-form");
   if (!form) return;
 
   const endpoint = "https://dz-backend-9m7h.onrender.com/api/contact";
+
+  // set up custom validation once
+  const details = document.getElementById("details");
+  if (details) {
+    details.addEventListener("invalid", () => {
+      if (details.validity.valueMissing) {
+        details.setCustomValidity("Please add a message before submitting.");
+      } else {
+        details.setCustomValidity("");
+      }
+    });
+
+    details.addEventListener("input", () => {
+      details.setCustomValidity("");
+    });
+  }
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -47,25 +65,8 @@
       name: form.querySelector("#name")?.value || "",
       company: form.querySelector("#company")?.value || "",
       email: form.querySelector("#email")?.value || "",
-      message: form.querySelector("#message")?.value || "",
+      message: form.querySelector("#details")?.value || "", // use textarea
     };
-
-    const form = document.getElementById("contact-form");
-    const details = document.getElementById("details");
-
-    if (form && details) {
-      details.addEventListener("invalid", (event) => {
-        if (details.validity.valueMissing) {
-          details.setCustomValidity("Please add a message before submitting.");
-        } else {
-          details.setCustomValidity("");
-        }
-      });
-
-      details.addEventListener("input", () => {
-        details.setCustomValidity("");
-      });
-    }
 
     try {
       const res = await fetch(endpoint, {
