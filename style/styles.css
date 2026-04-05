@@ -450,6 +450,10 @@ h1 {
   grid-column: 1 / -1;
 }
 
+.contact-form .primary-btn {
+  margin-top: 1.25rem;
+}
+
 .info-list {
   display: grid;
   gap: 1rem;
