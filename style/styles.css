@@ -668,3 +668,60 @@ select:focus {
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
 }
+
+/* Marquee wrapper */
+.marquee-wrap {
+  overflow: hidden;
+  position: relative;
+  padding: 1.5rem 0;
+  /* fade edges */
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+/* The scrolling track */
+.marquee-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+
+/* Individual client item */
+.marquee-item {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--color-text);
+  background: var(--color-bg);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.marquee-item:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Keyframe */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
