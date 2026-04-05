@@ -730,12 +730,6 @@ select:focus {
   height: 28px;
   width: auto;
   object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.6;
+  opacity: 0.9;
   transition: filter 0.2s ease, opacity 0.2s ease;
-}
-
-.marquee-item:hover img {
-  filter: grayscale(0%);
-  opacity: 1;
 }
